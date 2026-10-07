@@ -611,3 +611,26 @@ h3.pavement-title:first-of-type { margin-top: 8px; }
   .hero h1 { font-size: 34px; }
   body { font-size: 18px; }
 }
+
+
+/* AI 생성 이미지 표시 */
+.ai-badge {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  z-index: 3;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, .55);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: .02em;
+  pointer-events: none;
+}
+.ai-note {
+  margin: 14px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--ink-soft, #777);
+}

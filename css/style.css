@@ -299,7 +299,7 @@ h3.pavement-title:first-of-type { margin-top: 8px; }
 }
 .pavement-figure img { width: 100%; height: auto; display: block; }
 
-/* 사진 대신 직접 그린 단면 다이어그램 (저작권 걱정 없는 자체 제작) */
+/* 아스팔트 포장 단면: 층별 실사 이미지(예시용) 위에 층 이름만 표기 */
 .pavement-block { display: flex; gap: 32px; align-items: stretch; }
 .pavement-visual {
   flex: 1 1 45%;
@@ -311,55 +311,25 @@ h3.pavement-title:first-of-type { margin-top: 8px; }
 }
 .pavement-layer {
   position: relative;
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
   letter-spacing: .04em;
-  text-shadow: 0 1px 3px rgba(0,0,0,.45);
+  text-shadow: 0 1px 2px rgba(0,0,0,.9), 0 2px 10px rgba(0,0,0,.75), 0 0 22px rgba(0,0,0,.55);
 }
-/* 실측 두께 비율로 flex-grow 지정: 표층5 : 중층6 : 기층15 : 보조기층40 (동상방지층·노상은 미지정이라 자연스러운 비례로) */
-.layer-surface { flex: 5; background: repeating-linear-gradient(135deg, #2b2b2b 0 8px, #1f1f1f 8px 16px); font-size: 12px; }
-.layer-binder {
-  flex: 6;
-  background: #3a332c;
-  background-image: radial-gradient(rgba(255,255,255,.08) 2px, transparent 3px);
-  background-size: 18px 18px;
-  font-size: 12px;
-}
-.layer-base {
-  flex: 15;
-  background: #8b8a82;
-  background-image:
-    radial-gradient(rgba(255,255,255,.35) 3px, transparent 4px),
-    radial-gradient(rgba(26,26,26,.25) 3px, transparent 4px);
-  background-size: 26px 26px, 34px 34px;
-  background-position: 0 0, 14px 18px;
-  color: #2b2b2b;
-  text-shadow: 0 1px 2px rgba(255,255,255,.5);
-}
-.layer-subbase {
-  flex: 40;
-  background: #c7b48e;
-  background-image:
-    radial-gradient(rgba(255,255,255,.4) 4px, transparent 5px),
-    radial-gradient(rgba(90,70,40,.25) 3px, transparent 4px);
-  background-size: 30px 30px, 22px 22px;
-  background-position: 6px 6px, 16px 20px;
-  color: #3a2f1f;
-  text-shadow: 0 1px 2px rgba(255,255,255,.5);
-}
-.layer-frost {
-  flex: 15;
-  background: #d9c9a0;
-  background-image: radial-gradient(rgba(120,95,55,.2) 3px, transparent 4px);
-  background-size: 20px 20px;
-  color: #3a2f1f;
-  text-shadow: 0 1px 2px rgba(255,255,255,.5);
-}
-.layer-subgrade { flex: 20; background: linear-gradient(180deg, #8a6b47 0%, #6e5236 100%); }
+.layer-surface  { background-image: url("../img/pavement/surface.jpg"); }
+.layer-binder   { background-image: url("../img/pavement/binder.jpg"); }
+.layer-base     { background-image: url("../img/pavement/base.jpg"); }
+.layer-subbase  { background-image: url("../img/pavement/subbase.jpg"); }
+.layer-frost    { background-image: url("../img/pavement/frost.jpg"); }
+.layer-subgrade { background-image: url("../img/pavement/subgrade.jpg"); }
 
 .pavement-table { flex: 1 1 55%; display: flex; flex-direction: column; gap: 10px; }
 .pavement-row {
@@ -383,6 +353,7 @@ h3.pavement-title:first-of-type { margin-top: 8px; }
 @media (max-width: 860px) {
   .pavement-block { flex-direction: column; }
   .pavement-visual { flex: none; height: 220px; flex-direction: row; }
+  .pavement-layer { font-size: 13px; letter-spacing: .08em; writing-mode: vertical-rl; }
 }
 
 /* 제품 사진 카드 (자재 시편/제품 사진 + 설명) */

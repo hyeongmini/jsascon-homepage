@@ -640,3 +640,7 @@ h3.pavement-title:first-of-type { margin-top: 8px; }
   .hero h1 { font-size: 34px; }
   body { font-size: 18px; }
 }
+
+/* AI 생성 이미지 표시 */
+.ai-tag { position: absolute; right: 24px; bottom: 22px; z-index: 2; padding: 5px 13px 5px 11px; border-left: 3px solid var(--accent); background: rgba(26,26,26,.72); color: #fff; font-family: "Do Hyeon", "Gowun Dodum", "Pretendard Variable", Pretendard, sans-serif; font-size: 15px; line-height: 1.4; letter-spacing: .02em; }
+@media (max-width: 640px) { .ai-tag { right: 14px; bottom: 14px; font-size: 13px; } }

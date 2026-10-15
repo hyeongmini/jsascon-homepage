@@ -653,3 +653,6 @@ h3.pavement-title:first-of-type { margin-top: 8px; }
 .material-photo .ai-tag { right: 8px; bottom: 8px; padding: 3px 10px 3px 8px; font-size: 13px; }
 .material-photo .ai-tag { right: auto; left: 12px; bottom: 12px; font-size: 14px; }
 @media (max-width: 640px) { .ai-frame .ai-tag { font-size: 12px; } .material-photo .ai-tag { left: 8px; bottom: 8px; font-size: 12px; } }
+
+.ai-note { display: flex; justify-content: flex-end; margin: 12px 4px 0; }
+.ai-note .ai-tag { position: static; font-size: 14px; }

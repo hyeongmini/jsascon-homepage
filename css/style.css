@@ -292,6 +292,7 @@ a { color: inherit; text-decoration: none; }
 h3.pavement-title:first-of-type { margin-top: 8px; }
 .pavement-title-lg { margin-top: 96px; }
 .pavement-figure {
+  position: relative;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -503,6 +504,7 @@ h3.pavement-title:first-of-type { margin-top: 8px; }
 .material-circle-label { font-size: 13px; color: var(--ink-soft); text-align: center; line-height: 1.4; }
 
 .material-photo {
+  position: relative;
   flex: 1 1 55%;
   border-radius: 16px;
   overflow: hidden;
@@ -644,3 +646,8 @@ h3.pavement-title:first-of-type { margin-top: 8px; }
 /* AI 생성 이미지 표시 */
 .ai-tag { position: absolute; right: 24px; bottom: 22px; z-index: 2; padding: 5px 13px 5px 11px; border-left: 3px solid var(--accent); background: rgba(26,26,26,.72); color: #fff; font-family: "Do Hyeon", "Gowun Dodum", "Pretendard Variable", Pretendard, sans-serif; font-size: 15px; line-height: 1.4; letter-spacing: .02em; }
 @media (max-width: 640px) { .ai-tag { right: 14px; bottom: 14px; font-size: 13px; } }
+
+.ai-frame { position: relative; flex-shrink: 0; line-height: 0; }
+.ai-frame .ai-tag, .pavement-figure .ai-tag, .material-photo .ai-tag { right: 8px; bottom: 8px; padding: 3px 10px 3px 8px; font-size: 13px; }
+.material-photo .ai-tag { right: auto; left: 12px; bottom: 12px; font-size: 14px; }
+@media (max-width: 640px) { .ai-frame .ai-tag { font-size: 11px; right: 6px; bottom: 6px; } .material-photo .ai-tag { left: 8px; bottom: 8px; font-size: 12px; } }
